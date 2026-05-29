@@ -1,0 +1,41 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.suo
+*.user
+*.vs/
+
+# PHP
+*.log
+error_log
+
+# Environment / Secrets
+.env
+config.local.php
+
+# Composer
+vendor/
+composer.lock
+
+# Node (por si se agrega algún build tool)
+node_modules/
+npm-debug.log*
