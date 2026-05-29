@@ -1,0 +1,269 @@
+/*
+ * HabboGZ.css — Tema oscuro dorado para ZabboCMS
+ * Cush Media | v1.0.0
+ */
+
+/* ==============================
+   RESET & BASE
+   ============================== */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+    background-color: #0d0d0d;
+    color: #f0e6c8;
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==============================
+   VARIABLES CSS
+   ============================== */
+:root {
+    --gz-bg:          #0d0d0d;
+    --gz-surface:     #141414;
+    --gz-surface-2:   #1a1a1a;
+    --gz-card:        #1f1f1f;
+    --gz-gold:        #d4a017;
+    --gz-gold-2:      #f0c040;
+    --gz-gold-light:  #ffe680;
+    --gz-text:        #f0e6c8;
+    --gz-text-muted:  rgba(240,230,200,0.55);
+    --gz-text-faint:  rgba(240,230,200,0.28);
+    --gz-border:      rgba(212,160,23,0.18);
+    --gz-shadow:      0 4px 20px rgba(0,0,0,0.6);
+    --gz-radius:      10px;
+    --gz-radius-sm:   6px;
+    --gz-transition:  180ms cubic-bezier(0.16,1,0.3,1);
+}
+
+/* ==============================
+   NAVEGACIÓN
+   ============================== */
+.navbar, .nav-wrapper {
+    background: var(--gz-surface) !important;
+    border-bottom: 1px solid var(--gz-border) !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.5) !important;
+}
+
+.navbar-brand img {
+    filter: drop-shadow(0 0 8px rgba(212,160,23,0.5));
+}
+
+.nav-link, .navbar .nav-item a {
+    color: var(--gz-text-muted) !important;
+    transition: color var(--gz-transition) !important;
+    font-weight: 500;
+}
+
+.nav-link:hover,
+.navbar .nav-item a:hover {
+    color: var(--gz-gold-2) !important;
+}
+
+.nav-link.active {
+    color: var(--gz-gold) !important;
+    border-bottom: 2px solid var(--gz-gold);
+}
+
+/* ==============================
+   CARDS
+   ============================== */
+.card {
+    background: var(--gz-card) !important;
+    border: 1px solid var(--gz-border) !important;
+    border-radius: var(--gz-radius) !important;
+    box-shadow: var(--gz-shadow);
+    color: var(--gz-text) !important;
+}
+
+.card .card-header,
+.card-header {
+    background: rgba(212,160,23,0.06) !important;
+    border-bottom: 1px solid var(--gz-border) !important;
+    color: var(--gz-gold-2) !important;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.card-body {
+    background: transparent !important;
+}
+
+/* ==============================
+   BOTONES
+   ============================== */
+.btn-primary, .btn-default.active {
+    background: var(--gz-gold) !important;
+    border-color: var(--gz-gold) !important;
+    color: #1a1000 !important;
+    font-weight: 700;
+    border-radius: 50px !important;
+    transition: background var(--gz-transition), box-shadow var(--gz-transition) !important;
+}
+
+.btn-primary:hover {
+    background: var(--gz-gold-2) !important;
+    box-shadow: 0 4px 18px rgba(212,160,23,0.45) !important;
+}
+
+.btn-secondary, .btn-default {
+    background: rgba(255,255,255,0.06) !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
+    color: var(--gz-text) !important;
+    border-radius: 50px !important;
+}
+
+.btn-secondary:hover { background: rgba(255,255,255,0.1) !important; }
+
+/* ==============================
+   INPUTS & FORMS
+   ============================== */
+.form-control, input[type=text], input[type=password],
+input[type=email], textarea, select {
+    background: rgba(255,255,255,0.05) !important;
+    border: 1px solid var(--gz-border) !important;
+    color: var(--gz-text) !important;
+    border-radius: var(--gz-radius-sm) !important;
+    transition: border-color var(--gz-transition), box-shadow var(--gz-transition);
+}
+
+.form-control:focus {
+    border-color: var(--gz-gold) !important;
+    box-shadow: 0 0 0 3px rgba(212,160,23,0.2) !important;
+    outline: none !important;
+}
+
+.form-control::placeholder { color: var(--gz-text-faint) !important; }
+
+/* ==============================
+   TABLAS
+   ============================== */
+table.table {
+    border-color: var(--gz-border) !important;
+    color: var(--gz-text) !important;
+}
+
+table.table thead th {
+    background: rgba(212,160,23,0.08) !important;
+    color: var(--gz-gold) !important;
+    border-color: var(--gz-border) !important;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+table.table tbody tr:hover {
+    background: rgba(212,160,23,0.05) !important;
+}
+
+table.table td, table.table th {
+    border-color: var(--gz-border) !important;
+}
+
+/* ==============================
+   BADGES & LABELS
+   ============================== */
+.badge, .label {
+    border-radius: 50px !important;
+}
+
+.badge-primary, .label-primary {
+    background: var(--gz-gold) !important;
+    color: #1a1000 !important;
+}
+
+.badge-success, .label-success { background: #2e7d32 !important; }
+.badge-danger,  .label-danger  { background: #b71c1c !important; }
+.badge-info,    .label-info    { background: #1565c0 !important; }
+
+/* ==============================
+   ALERTAS
+   ============================== */
+.alert {
+    border-radius: var(--gz-radius) !important;
+    border: 1px solid var(--gz-border) !important;
+}
+
+.alert-info    { background: rgba(21,101,192,0.15)  !important; color: #90caf9 !important; }
+.alert-success { background: rgba(46,125,50,0.15)   !important; color: #a5d6a7 !important; }
+.alert-warning { background: rgba(212,160,23,0.15)  !important; color: var(--gz-gold-2) !important; }
+.alert-danger  { background: rgba(183,28,28,0.15)   !important; color: #ef9a9a !important; }
+
+/* ==============================
+   LEADERBOARD
+   ============================== */
+.leaderboard-rank-1 {
+    background: linear-gradient(90deg, rgba(212,160,23,0.2), transparent) !important;
+    border-left: 3px solid var(--gz-gold) !important;
+}
+.leaderboard-rank-2 {
+    background: linear-gradient(90deg, rgba(192,192,192,0.1), transparent) !important;
+    border-left: 3px solid #c0c0c0 !important;
+}
+.leaderboard-rank-3 {
+    background: linear-gradient(90deg, rgba(184,115,51,0.1), transparent) !important;
+    border-left: 3px solid #b8733 !important;
+}
+
+/* ==============================
+   PROFILE / MEBG
+   ============================== */
+.mebg .mottobox {
+    background-color: rgba(20,20,20,0.9) !important;
+    border: 1px solid var(--gz-border) !important;
+}
+
+.window_style_2 .inner {
+    background-color: #1a1a1a !important;
+    color: var(--gz-text) !important;
+}
+
+/* ==============================
+   SCROLL BAR
+   ============================== */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--gz-surface); }
+::-webkit-scrollbar-thumb {
+    background: rgba(212,160,23,0.4);
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gz-gold);
+}
+
+/* ==============================
+   ANIMATIONS
+   ============================== */
+@keyframes gz-glow {
+    0%, 100% { box-shadow: 0 0 6px rgba(212,160,23,0.3); }
+    50%       { box-shadow: 0 0 18px rgba(212,160,23,0.7); }
+}
+
+.gz-glow { animation: gz-glow 2.5s ease-in-out infinite; }
+
+/* ==============================
+   GOLD TEXT GRADIENT
+   ============================== */
+.gz-gold-text {
+    background: linear-gradient(135deg, var(--gz-gold), var(--gz-gold-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+}
+
+/* ==============================
+   DAILY REWARD (override)
+   ============================== */
+.daily-title   { color: var(--gz-gold-2) !important; text-shadow: 0 0 20px rgba(212,160,23,0.6) !important; }
+.daily-btn     { background: linear-gradient(135deg, var(--gz-gold), #e55039) !important; }
+
+/* ==============================
+   RESPONSIVE
+   ============================== */
+@media (max-width: 768px) {
+    .navbar-brand { font-size: 16px; }
+    .card { border-radius: var(--gz-radius-sm) !important; }
+}
